@@ -1,0 +1,10 @@
+{
+  "name": "monk-ionic-seed",
+  "private": "true",
+  "dependencies": {
+    "ionic": "^1.2.4"
+  },
+  "resolutions": {
+    "angular": ">= 1.0.8"
+  }
+}
