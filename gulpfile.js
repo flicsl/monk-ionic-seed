@@ -79,7 +79,7 @@ gulp.task('config', function () {
 });
 
 gulp.task('scripts', ['config'], function () {
-  gulp.src([outline.dist + "/js/outline.js", paths.js])
+  gulp.src([outline.src + '/index.js', outline.dist + "/js/outline.js", paths.js])
   .pipe(plumber())
   .pipe(concat(outline.name + ".min.js"))
   .pipe(ngAnnotate())
