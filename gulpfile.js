@@ -19,7 +19,6 @@ var watch = require('gulp-watch');
 var ngConstant = require('gulp-ng-constant');
 var gulpif = require('gulp-if');
 var htmlreplace = require('gulp-html-replace');
-var debug = require('gulp-debug');
 var args = require('yargs')
            .alias('p', 'prod')
            .default('prod', false)
@@ -94,7 +93,7 @@ gulp.task('index', function () {
   .pipe(jade({pretty: true}))
   .pipe(htmlreplace(indexInject))
 
-  .pipe(inject(gulp.src(bowerFiles(), {read: false}).pipe(debug()), {
+  .pipe(inject(gulp.src(bowerFiles(), {read: false}), {
     name: 'bower',
     addRootSlash: false,
     ignorePath: "/" + outline.dist
