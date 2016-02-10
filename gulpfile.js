@@ -63,11 +63,11 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function() {
-  watch(paths.ionicSass, gulp.start('ionic-sass'));
-  watch(paths.sass, gulp.start('sass'));
-  watch(paths.jade, gulp.start('jade'));
-  watch(paths.js, gulp.start('scripts'));
-  watch(paths.assets, gulp.start('assets'));
+  watch(paths.ionicSass, function(){gulp.start('ionic-sass');});
+  watch(paths.sass, function(){gulp.start('sass');});
+  watch(paths.jade, function(){gulp.start('jade');});
+  watch(paths.js, function(){gulp.start('scripts');});
+  watch(paths.assets, function(){gulp.start('assets');});
 });
 
 gulp.task('config', function () {
